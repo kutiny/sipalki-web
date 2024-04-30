@@ -1,0 +1,18 @@
+.home-view {
+    padding: 2rem;
+
+    .soo-nam {
+        display: block;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        max-width: 200px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .soo-nam {
+        shape-outside: circle();
+        float: left;
+        padding-right: 3rem;
+    }
+}

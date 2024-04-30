@@ -1,0 +1,130 @@
+.header {
+    align-items: center;
+    background-color: var(--header-background-color, rgb(76 5 25));
+    color: var(--color-light);
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &-logo {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    &_img {
+        max-height: 3rem;
+    }
+    &_text {
+        font-size: 1.25rem;
+        font-weight: 800;
+        transition: font-size .3s ease-in-out;
+    }
+}
+
+.nav-menu {
+    align-items: flex-start;
+    background: var(--header-background-color);
+    box-shadow: inset 0 0 10px rgb(10 10 10 / .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.header-nav .nav-menu {
+    overflow: hidden;
+    padding-block: 1rem;
+    scale: 1 0;
+    transition: scale .3s ease-in-out,
+                rotate .3s .3s ease-in-out;
+    transform-origin: top center;
+}
+
+.header-nav .nav-menu.opened {
+    display: flex;
+    scale: 1 1;
+}
+
+.hamburger-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    padding: 1rem;
+
+    .hamburger-line {
+        --_border-radius: 2px;
+        --height: 0.25rem;
+        --spacing: 2;
+        background: var(--color-light);
+        border-radius: var(--_border-radius);
+        display: block;
+        height: var(--height);
+        position: relative;
+        transition: background-color .3s ease-in-out;
+        width: 2rem;
+
+        &::before,
+        &::after {
+            background-color: var(--color-light);
+            border-radius: var(--_border-radius);
+            content: '';
+            display: block;
+            height: var(--height);
+            position: absolute;
+            top: calc(-1 * var(--spacing) * var(--height));
+            transition: rotate .3s ease-in-out, translate .3s ease-in-out;
+            width: 100%;
+        }
+
+        &::after {
+            top: calc(var(--spacing) * var(--height));
+        }
+    }
+
+    &.opened .hamburger-line {
+        background-color: transparent;
+
+        &::after {
+            rotate: -45deg;
+            translate: 0 calc(-1 * var(--spacing) * var(--height));
+            transition: translate .15s ease-in,
+						rotate .15s .15s ease-out;
+        }
+        &::before {
+            rotate: 45deg;
+            translate: 0 calc(var(--spacing) * var(--height));
+            transition: translate .15s ease-in,
+						rotate .15s .15s ease-out;
+        }
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .header_text {
+        font-size: 1.5rem;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .header-nav .nav-menu {
+        box-shadow: none;
+        flex-direction: row;
+        position: initial;
+        scale: 1 1;
+    }
+}
+
