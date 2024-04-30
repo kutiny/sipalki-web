@@ -1,9 +1,9 @@
 FROM node:22-alpine AS BUILDER
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN npm i
 COPY . .
-RUN npm build
+RUN npm run build
 
 FROM nginx:stable-alpine3.19-perl
 COPY --from=BUILDER /app/dist /usr/share/nginx/html
