@@ -1,27 +1,43 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "./views/home/home";
-import { PracticaPositionsView } from "./views/practica-positions/practica-positions";
-import { PositionsView } from "./views/positions/positions";
-import { HomeView } from "./views/home-view/home-view";
+import { Suspense, lazy } from "react";
+
+const PracticaPositionsView = lazy(() => import('./views/practica-positions/practica-positions'));
+const PositionsView = lazy(() => import('./views/positions/positions'));
+const HomeView = lazy(() => import('./views/home-view/home-view'));
+const Home = lazy(() => import('./views/home/home'));
 
 const routes = [
     {
         path: "/",
         element: (
-            <Home />
+            <Suspense fallback={<p>Loading...</p>}>
+                <Home />
+            </Suspense>
         ),
         children: [
             {
                 path: "",
-                element: (<HomeView />),
+                element: (
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <HomeView />
+                    </Suspense>
+                ),
             },
             {
                 path: "v/practica-posiciones",
-                element: (<PracticaPositionsView />),
+                element: (
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <PracticaPositionsView />
+                    </Suspense>
+                ),
                 children: [
                     {
                         path: ':seed',
-                        element: (<PracticaPositionsView />)
+                        element: (
+                            <Suspense fallback={<p>Loading...</p>}>
+                                <PracticaPositionsView />
+                            </Suspense>
+                        )
                     },
                 ],
             },
@@ -33,5 +49,7 @@ const routes = [
     }
 ];
 
-export const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes);
+
+export { router };
 

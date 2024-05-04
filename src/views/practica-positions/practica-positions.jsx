@@ -6,7 +6,7 @@ import { parseOrder, randomizeOrdering } from '../../helpers/positions-randomize
 import { useEffect, useState } from 'react';
 import { Position } from '../../components/position/position';
 
-export function PracticaPositionsView() {
+export default function PracticaPositionsView() {
     const { seed } = useParams();
     const navigate = useNavigate();
     const [order, setOrder] = useState([]);
