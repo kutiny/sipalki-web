@@ -1,0 +1,21 @@
+export const techiniques = [
+    { name: 'KWON BOP', meaning: 'Combate en todas sus variantes, contra uno y varios atacantes' },
+    { name: 'HO SIN SUL', meaning: 'Defensa personal' },
+    { name: 'SHIM BOP', meaning: 'Meditación, respiración, visualización' },
+    { name: 'DAN BONG', meaning: 'Palo corto' },
+    { name: 'BONG', meaning: 'Palo largo' },
+    { name: 'NANG GOM', meaning: 'Palos articulados' },
+    { name: 'SSAN', meaning: 'Cinturón' },
+    { name: 'DAN GOM', meaning: 'Cuchillo' },
+    { name: 'CHANG', meaning: 'Lanza' },
+    { name: 'CHUNG IONG DO', meaning: 'Espada' },
+    { name: 'BANG FE', meaning: 'Escudo' },
+    { name: 'KOM', meaning: 'Sable' },
+    { name: 'SANG GOM', meaning: 'Dos cuchillos' },
+    { name: 'KWAN', meaning: 'Manopla' },
+    { name: 'CHONG GOM', meaning: 'Bayoneta' },
+    { name: 'FION SUL', meaning: 'Látigo' },
+    { name: 'DOKI', meaning: 'Hacha' },
+    { name: 'KUNG SUL', meaning: 'Arquería' },
+];
+
