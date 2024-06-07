@@ -3,7 +3,7 @@ import { conceptList } from './concepts-list';
 import './concepts.scss';
 import { useLocation } from 'react-router-dom';
 
-export function ConceptsView() {
+export default function ConceptsView() {
     const location = useLocation();
 
     useEffect(() => {
