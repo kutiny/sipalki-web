@@ -1,7 +1,7 @@
 import SooNamYoo from '../../assets/soo_nam_yoo.png';
 import './home-view.scss';
 
-export function HomeView() {
+export default function HomeView() {
     return (
         <div className='home-view'>
             <img src={SooNamYoo} className='soo-nam' />

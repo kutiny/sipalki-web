@@ -2,7 +2,7 @@ import { Position } from '../../components/position/position';
 import { positions } from '../../constants/positions';
 import './positions.scss';
 
-export function PositionsView() {
+export default function PositionsView() {
 
     return (
         <div className='positions-view'>

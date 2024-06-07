@@ -20,17 +20,31 @@
   color: var(--color-dark);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 .no-format-link {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-.spk, .bold {
-    font-weight: 700;
+.spk,
+.bold {
+  font-weight: 700;
 }
+
+:target {
+  scroll-margin-top: 6rem;
+}
+
+@import './style-modules/table.scss';
+@import './style-modules/links.scss';
+@import './style-modules/lists.scss';
+

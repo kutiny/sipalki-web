@@ -6,7 +6,7 @@ import { parseOrder, randomizeOrdering } from '../../helpers/positions-randomize
 import { useEffect, useState } from 'react';
 import { Position } from '../../components/position/position';
 
-export function PracticaPositionsView() {
+export default function PracticaPositionsView() {
     const { seed } = useParams();
     const navigate = useNavigate();
     const [order, setOrder] = useState([]);
@@ -52,6 +52,8 @@ export function PracticaPositionsView() {
 
     return (
         <div className='practica-positions-view'>
+            <h1>Practicar posiciones básicas</h1>
+            <p>Esta herramienta está pensada para escuchar o leer el nombre de la posición, hacerla o mentalizarla y luego mostrar la imagen para corroborar.</p>
             {!gameEnded && currentPos && (
                 <>
                     <Position

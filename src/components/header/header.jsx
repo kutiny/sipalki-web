@@ -1,4 +1,5 @@
 import './header.scss';
+import '../button/button.scss';
 import logo from '../../assets/escudo-sipalki.png';
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
@@ -46,6 +47,10 @@ export function Header() {
                         to="/v/posiciones"
 						onClick={onNavigate}
                         className='btn btn--ghost'>Posiciones</NavLink>
+                    <NavLink
+                        to="/v/conceptos"
+						onClick={onNavigate}
+                        className='btn btn--ghost'>Conceptos</NavLink>
                 </nav>
             </div>
         </div>
