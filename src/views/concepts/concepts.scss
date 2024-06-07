@@ -1,0 +1,13 @@
+.concepts-view {
+  margin-block: 1rem;
+  margin-inline: 1rem;
+
+  .concept__message {
+    background-color: rgb(21 21 21 / .8);
+    border-radius: 4px;
+    color: var(--color-light);
+    font-style: italic;
+    padding: 0.25rem 1rem;
+  }
+}
+

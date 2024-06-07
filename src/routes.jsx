@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { ConceptsView } from "./views/concepts/concepts";
 
 const PracticaPositionsView = lazy(() => import('./views/practica-positions/practica-positions'));
 const PositionsView = lazy(() => import('./views/positions/positions'));
@@ -44,6 +45,10 @@ const routes = [
             {
                 path: "v/posiciones",
                 element: (<PositionsView />),
+            },
+            {
+                path: "v/conceptos",
+                element: (<ConceptsView />),
             }
         ],
     }

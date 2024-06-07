@@ -52,6 +52,8 @@ export default function PracticaPositionsView() {
 
     return (
         <div className='practica-positions-view'>
+            <h1>Practicar posiciones básicas</h1>
+            <p>Esta herramienta está pensada para escuchar o leer el nombre de la posición, hacerla o mentalizarla y luego mostrar la imagen para corroborar.</p>
             {!gameEnded && currentPos && (
                 <>
                     <Position

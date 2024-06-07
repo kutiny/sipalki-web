@@ -47,6 +47,10 @@ export function Header() {
                         to="/v/posiciones"
 						onClick={onNavigate}
                         className='btn btn--ghost'>Posiciones</NavLink>
+                    <NavLink
+                        to="/v/conceptos"
+						onClick={onNavigate}
+                        className='btn btn--ghost'>Conceptos</NavLink>
                 </nav>
             </div>
         </div>

@@ -1,0 +1,40 @@
+.table {
+  --border-radius: 4px;
+  border-collapse: collapse;
+  margin-block: 1rem;
+  width: 100%;
+
+  &__headrow {
+    color: var(--color-light);
+
+    & th {
+      background-color: var(--primary);
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  &__body td {
+    padding: 0.25rem 0.5rem;
+
+  }
+
+  &__body tr {
+    &:nth-child(even) {
+      background-color: rgb(208 202 202);
+    }
+  }
+
+  &__headrow th,
+  &__body td {
+    &:first-child {
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+  }
+}
+
