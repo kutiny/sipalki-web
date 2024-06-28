@@ -5,18 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 export function Header() {
-
     const [menuOpened, setMenuOpened] = useState(false);
-
-    function toggleMenu() {
-        setMenuOpened(oldState => !oldState);
-    }
-
-    function onNavigate(ev) {
-        if (ev.target.classList.contains('btn')) {
-            toggleMenu();
-        }
-    }
 
     return (
         <div className='header'>
@@ -31,29 +20,29 @@ export function Header() {
                 <button
                     className={'hamburger-menu ' + (menuOpened ? 'opened' : '')}
                     type='button'
-                    onClick={toggleMenu}>
+                    onClick={() => setMenuOpened(s => !s)}>
                     <span className='hamburger-line'></span>
                 </button>
                 <nav className={'nav-menu ' + (menuOpened ? 'opened' : '')}>
                     <NavLink
                         to="/"
-						onClick={onNavigate}
+						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Inicio</NavLink>
                     <NavLink
                         to="/v/practica-posiciones"
-						onClick={onNavigate}
+						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Práctica</NavLink>
                     <NavLink
                         to="/v/posiciones"
-						onClick={onNavigate}
+						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Posiciones</NavLink>
                     <NavLink
                         to="/v/conceptos"
-						onClick={onNavigate}
+						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Conceptos</NavLink>
                     <NavLink
                         to="/v/tecnicas"
-						onClick={onNavigate}
+						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Técnicas</NavLink>
                 </nav>
             </div>
