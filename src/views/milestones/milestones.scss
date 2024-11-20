@@ -1,0 +1,53 @@
+.milestones-view {
+  margin: 1rem;
+}
+
+.milestones {
+  padding-left: 2rem;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(180deg, transparent 1%, var(--primary) 1%, var(--primary));
+    content: '';
+    height: 100%;
+    left: 0.875rem;
+    position: absolute;
+    top: 0;
+    width: 4px;
+  }
+}
+
+.milestone {
+  margin-block: 2rem;
+
+  &:first-of-type {
+    padding-top: 4rem;
+  }
+
+  &-date {
+    font-size: 1.125rem;
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      background-color: var(--primary);
+      border-radius: 1rem;
+      content: '';
+      height: 1rem;
+      left: -1.5rem;
+      position: absolute;
+      top: 0.35rem;
+      width: 1rem;
+    }
+
+    &::after {
+      content: '';
+      background-color: var(--primary);
+      height: 4px;
+      left: -1.5rem;
+      position: absolute;
+      top: 0.75rem;
+      width: 2rem;
+    }
+  }
+}

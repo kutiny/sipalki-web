@@ -7,6 +7,7 @@ const HomeView = lazy(() => import('./views/home-view/home-view'));
 const Home = lazy(() => import('./views/home/home'));
 const ConceptsView = lazy(() => import('./views/concepts/concepts'));
 const TechniquesView = lazy(() => import('./views/techniques/techniques'));
+const MilestonesView = lazy(() => import('./views/milestones/milestones'));
 
 const routes = [
     {
@@ -54,6 +55,10 @@ const routes = [
             {
                 path: "v/tecnicas",
                 element: (<TechniquesView />),
+            },
+            {
+                path: "v/hitos",
+                element: (<MilestonesView />),
             }
         ],
     }

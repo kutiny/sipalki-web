@@ -12,7 +12,7 @@ export function Header() {
             <Link className='no-format-link' to='/'>
                 <div className='header-logo'>
                     <img className='header_img' src={logo} alt='Escudo Sipalki' />
-                    <p className='header_text'>SIPALKI</p>
+                    <p className='header_text'>SIPALKIDO</p>
                 </div>
             </Link>
 
@@ -28,6 +28,10 @@ export function Header() {
                         to="/"
 						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Inicio</NavLink>
+                    <NavLink
+                        to="/v/hitos"
+						onClick={() => setMenuOpened(false)}
+                        className='btn btn--ghost'>Hitos</NavLink>
                     <NavLink
                         to="/v/practica-posiciones"
 						onClick={() => setMenuOpened(false)}
