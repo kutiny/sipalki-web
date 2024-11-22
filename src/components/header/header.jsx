@@ -33,21 +33,9 @@ export function Header() {
 						onClick={() => setMenuOpened(false)}
                         className='btn btn--ghost'>Hitos</NavLink>
                     <NavLink
-                        to="/v/practica-posiciones"
+                        to="/v/area-de-formacion"
 						onClick={() => setMenuOpened(false)}
-                        className='btn btn--ghost'>Práctica</NavLink>
-                    <NavLink
-                        to="/v/posiciones"
-						onClick={() => setMenuOpened(false)}
-                        className='btn btn--ghost'>Posiciones</NavLink>
-                    <NavLink
-                        to="/v/conceptos"
-						onClick={() => setMenuOpened(false)}
-                        className='btn btn--ghost'>Conceptos</NavLink>
-                    <NavLink
-                        to="/v/tecnicas"
-						onClick={() => setMenuOpened(false)}
-                        className='btn btn--ghost'>Técnicas</NavLink>
+                        className='btn btn--ghost'>Area de formación</NavLink>
                 </nav>
             </div>
         </div>

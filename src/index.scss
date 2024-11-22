@@ -1,26 +1,26 @@
 :root {
+  --background-color: rgb(218 212 212);
+  --border-radius: 0.25rem;
+  --color-dark: rgb(10 10 10 / 0.87);
+  --color-light: rgb(255 255 255 / 0.87);
+  --header-background-color: rgb(76 5 25);
+  --primary: rgb(220 38 38);
+  --primary-light: rgb(239 68 68);
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  background-color: rgb(218 212 212);
-
+  background-color: var(--background-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --primary: rgb(220 38 38);
-  --primary-light: rgb(239 68 68);
-  --color-light: rgb(255 255 255 / 0.87);
-  --color-dark: rgb(10 10 10 / 0.87);
-  --header-background-color: rgb(76 5 25);
-
   color: var(--color-dark);
 }
 
 html {
+  background-color: var(--background-color);
   scroll-behavior: smooth;
 }
 
@@ -42,6 +42,10 @@ html {
 
 :target {
   scroll-margin-top: 6rem;
+}
+
+h1, h2, h3 {
+  margin-block: 2rem 1rem;
 }
 
 @import './style-modules/table.scss';

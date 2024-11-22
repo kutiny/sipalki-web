@@ -8,6 +8,8 @@ const Home = lazy(() => import('./views/home/home'));
 const ConceptsView = lazy(() => import('./views/concepts/concepts'));
 const TechniquesView = lazy(() => import('./views/techniques/techniques'));
 const MilestonesView = lazy(() => import('./views/milestones/milestones'));
+const FalBoiView = lazy(() => import('./views/falboi/falboi'));
+const LearningSectionView = lazy(() => import('./views/learning-section/learning-section'));
 
 const routes = [
     {
@@ -45,6 +47,10 @@ const routes = [
                 ],
             },
             {
+                path: "v/area-de-formacion",
+                element: (<LearningSectionView />),
+            },
+            {
                 path: "v/posiciones",
                 element: (<PositionsView />),
             },
@@ -59,7 +65,11 @@ const routes = [
             {
                 path: "v/hitos",
                 element: (<MilestonesView />),
-            }
+            },
+            {
+                path: "v/falboi",
+                element: (<FalBoiView />),
+            },
         ],
     }
 ];
