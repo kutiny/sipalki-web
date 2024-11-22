@@ -1,5 +1,5 @@
 import './falboi.scss';
-import falBoiImage from '../../assets/falboi.svg';
+import falBoiImage from '../../assets/FalBoi.svg';
 
 export default function FalBoiView() {
     return (
