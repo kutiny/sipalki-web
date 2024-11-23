@@ -7,7 +7,7 @@ export default function PositionsView() {
 
     return (
         <div className='positions-view'>
-            <NavLink className='btn' to='/v/area-de-formacion'>Volver al area de formación</NavLink>
+            <NavLink className='back-btn' to='/v/area-de-formacion'>Volver al área de formación</NavLink>
 
             <div className='positions-list'>
             {

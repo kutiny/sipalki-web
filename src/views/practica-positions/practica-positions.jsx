@@ -5,6 +5,7 @@ import './practica-positions.scss';
 import { parseOrder, randomizeOrdering } from '../../helpers/positions-randomizer';
 import { useEffect, useState } from 'react';
 import { Position } from '../../components/position/position';
+import { NavLink } from 'react-router-dom';
 
 export default function PracticaPositionsView() {
     const { seed } = useParams();
@@ -18,7 +19,7 @@ export default function PracticaPositionsView() {
     useEffect(() => {
         if (!seed) {
             const newSeed = randomizeOrdering(positions.length);
-            navigate(`/v/practica-posiciones/${newSeed}`);
+            navigate(`/v/practica-posiciones/${newSeed}`, { replace: true });
             return;
         }
         setOrder(parseOrder(seed));
@@ -52,7 +53,8 @@ export default function PracticaPositionsView() {
 
     return (
         <div className='practica-positions-view'>
-            <h1>Practicar posiciones básicas</h1>
+            <NavLink className='back-btn' to='/v/area-de-formacion'>Volver al área de formación</NavLink>
+            <h1 className='view__title'>Practicar posiciones básicas</h1>
             <p>Esta herramienta está pensada para escuchar o leer el nombre de la posición, hacerla o mentalizarla y luego mostrar la imagen para corroborar.</p>
             {!gameEnded && currentPos && (
                 <>

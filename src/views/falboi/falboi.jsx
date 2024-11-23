@@ -1,10 +1,12 @@
 import './falboi.scss';
 import falBoiImage from '../../assets/FalBoi.svg';
+import { NavLink } from 'react-router-dom';
 
 export default function FalBoiView() {
     return (
         <div className="falboi-view">
-            <h1>FalBoi</h1>
+            <NavLink className='back-btn' to='/v/area-de-formacion'>Volver al área de formación</NavLink>
+            <h1 className='view__title'>FalBoi</h1>
             <img className="falboi-image" src={falBoiImage} alt='FalBoi' />
             <p>
                 El <strong>Falboi</strong>, también conocido como &quot;Palboi&quot;, es un concepto esencial, derivado de &quot;Palbo&quot; (팔보, 八步), que significa &quot;ocho pasos&quot; en coreano, representa un conjunto de movimientos estratégicos diseñados para mejorar el desempeño en combate. Más que un simple desplazamiento, el Falboi integra técnicas que combinan agilidad, precisión y táctica.

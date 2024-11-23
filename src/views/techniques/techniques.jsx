@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
 import { techiniques } from "./techniques-list"
 import './techniques.scss';
 
 export default function TechniquesView() {
     return (
         <div className='techniques-view'>
-            <h2 className='concept__title'>18 Técnicas</h2>
+            <NavLink className='back-btn' to='/v/area-de-formacion'>Volver al área de formación</NavLink>
+            <h1 className='view__title'>18 Técnicas</h1>
 
             <table className='concepts-table table'>
                 <thead>

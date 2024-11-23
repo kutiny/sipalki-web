@@ -29,6 +29,10 @@ const routes = [
                 ),
             },
             {
+                path: "v/area-de-formacion",
+                element: (<LearningSectionView />),
+            },
+            {
                 path: "v/practica-posiciones",
                 element: (
                     <Suspense fallback={<p>Loading...</p>}>
@@ -45,10 +49,6 @@ const routes = [
                         )
                     },
                 ],
-            },
-            {
-                path: "v/area-de-formacion",
-                element: (<LearningSectionView />),
             },
             {
                 path: "v/posiciones",

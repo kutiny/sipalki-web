@@ -1,7 +1,7 @@
 import { Fragment, useEffect } from 'react';
 import { conceptList } from './concepts-list';
 import './concepts.scss';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 export default function ConceptsView() {
     const location = useLocation();
@@ -14,7 +14,8 @@ export default function ConceptsView() {
 
     return (
         <div className='concepts-view'>
-            <h2 id="sumario" className='view__title'>Sumario</h2>
+            <NavLink className='back-btn' to='/v/area-de-formacion'>Volver al área de formación</NavLink>
+            <h1 id="sumario" className='view__title'>Sumario</h1>
 
             <ul className='summary-list'>
                 {conceptList.map(item => (

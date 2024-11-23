@@ -47,6 +47,15 @@ html {
 h1, h2, h3 {
   margin-block: 2rem 1rem;
 }
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
 
 @import './style-modules/table.scss';
 @import './style-modules/links.scss';
